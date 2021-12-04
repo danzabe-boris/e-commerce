@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+ <!-- page content -->
+ <div class="right_col" role="main">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-sm-12 ">
+          <div class="x_panel">
+            <div class="x_title">
+              <h1>Fiche technique ({{produits.nom_produit}})</h1>
+            </div>
+            
+            <div class="x_content">
+
+              <div class="col-md-6 col-sm-6 ">
+                <div class="product-image">
+                  <img src="{% static produits.photo1.url %}" alt="..." />
+                </div>
+                <div class="product_gallery">
+                  <a href="{% url 'description2' produits.id %}">
+                    <img src="{% static produits.photo2.url %}" alt="..." />
+                  </a>
+                  <a href="{% url 'description3' produits.id %}">
+                    <img src="{% static produits.photo3.url %}" alt="..." />
+                  </a>
+                  <a href="{% url 'description4' produits.id %}">
+                    <img src="{% static produits.photo4.url %}" alt="..." />
+                  </a>
+                  <a href="{% url 'description5' produits.id %}">
+                    <img src="{% static produits.photo5.url %}" alt="..." />
+                  </a>
+                </div>
+              </div>
+
+              <div class="col-md-5 col-sm-5 " style="border:0px solid #e5e5e5;">
+
+                <h3 class="prod_title">{{produits.nom_produit}}</h3>
+
+                <p>{{produits.description}}</p>
+                <br />
+
+                <div class="">
+                  <h2>Disponible également en couleurs:</h2>
+                  <ul class="list-inline prod_color display-layout">
+                    <li>
+                      <p>Vert</p>
+                      <div class="color bg-green"></div>
+                    </li>
+                    <li>
+                      <p>Bleu</p>
+                      <div class="color bg-blue"></div>
+                    </li>
+                    <li>
+                      <p>Rouge</p>
+                      <div class="color bg-red"></div>
+                    </li>
+                    <li>
+                      <p>Orange</p>
+                      <div class="color bg-orange"></div>
+                    </li>
+                    <li>
+                        <p>Noir</p>
+                        <div class="color bg-dark"></div>
+                    </li>
+                    <li>
+                        <p>Blanc</p>
+                        <div class="color bg-white"></div>
+                    </li>
+                </hr>
+                  </ul>
+                </div>
+                <br />
+
+               
+                <br />
+
+                <div class="">
+                  <div class="product_price">
+                    <h1 class="price">{{produits.prix}}frs CFA</h1>
+                    <br>
+                  </div>
+                </div>
+
+                <div class="text-center">
+                  <a href="{% url 'ajout' produits.id produits.prix %}" class="btn btn-warning btn-lg">Ajouter au panier</a>
+                </div>
+
+              </div>
+
+
+              
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /page content -->
+{% endblock %}

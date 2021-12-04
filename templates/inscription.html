@@ -1,0 +1,108 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>climax shop - inscription</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="{% static 'fontawesome/css/all.min.css' %}" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="{% static 'css/css.min.css' %}" rel="stylesheet">
+
+
+</head>
+
+<body background="{% static 'img/arriere.gif'%}">
+    <div class="container">
+        <div class="card o-hidden border-0 shadow-lg my-5">
+                <div class="row">
+                    <div class="col-lg-1 d-none d-lg-block bg-register-image"></div>
+                    <div class="col-lg-10">
+                        <div class="p-5">
+                            <div class="text-center">
+                                <h1 class="h4 text-gray-900 mb-4">Créer votre compte!</h1>
+                            </div>
+                            <form class="user" method="POST">
+                                {% csrf_token %}
+                                {% if error_password %}
+                                <div class="text-center text-danger">
+                                    {{erreur1}}
+                                </div>
+                                </br>
+                                {% endif %}
+                                {% if error_adresse %}
+                                <div class="text-center text-danger">
+                                    {{erreur2}}
+                                </div>
+                                </br>
+                                {% endif %}
+
+                            </br>
+                                <div class="form-group row">
+                                    <div class="col-sm-6 mb-3 mb-sm-0">
+                                        <input type="text" name="nom" required class="form-control form-control-user" id="exampleFirstName"
+                                            placeholder="Votre nom">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input type="text" required name="prenom" class="form-control form-control-user" id="exampleLastName"
+                                            placeholder="Votre prénom">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" name="email" required class="form-control form-control-user" id="exampleInputEmail"
+                                        placeholder="Votre adresse mail">
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-6 mb-3 mb-sm-0">
+                                        <input type="password" name="password1" required class="form-control form-control-user"
+                                            id="exampleInputPassword" placeholder="Votre mot de passe">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input type="password" name="password2" required class="form-control form-control-user"
+                                            id="exampleRepeatPassword" placeholder="Répéter votre mot de passe">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="localisation" required class="form-control form-control-user" id="exampleInputEmail"
+                                        placeholder="Votre localisation">
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-6 mb-3 mb-sm-0">
+                                        <input name="phone" text="number" required class="form-control form-control-user"
+                                         placeholder="Votre numéro de téléphone">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input type="number" name="age" required class="form-control form-control-user"
+                                             placeholder="Votre âge">
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-warning btn-user btn-block">
+                                    Créer votre compte
+                                </button>
+                            </form>
+                            <hr>
+                            <div class="text-center">
+                                <a class="small" href="{% url 'connecter' %}">Vous avez déja un compte? Connectez-vous!</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
