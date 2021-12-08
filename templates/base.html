@@ -15,8 +15,9 @@
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
     <link href="{% static 'css/styles_categorie.css' %}" rel="stylesheet" />
+    
 
-    <title>climax shop |description </title>
+    <title>clivers shop |description </title>
 
     <!-- Bootstrap -->
     <link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
@@ -29,17 +30,12 @@
 
     <!-- Custom Theme Style -->
     <link href="{% static 'css/custom.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/styles_mobile.css' %}" rel="stylesheet" />
   </head>
     <body>
         <nav class="navbar navbar-expand-lg" id="mainNav">
-            <div class="container">
-            <h3><div class="text-warning">CLIMAX-SHOP</a></h3>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                     Menu
-                    <i class="fas fa-bars ms-1"></i>
-                </button>
-            </div>
-      </nav>
+            <a class="navbar-brands"><strong>CLIVERS-SHOP</strong></a><div class="container">
+        </nav>
         {% block content %}
 
 

@@ -15,21 +15,22 @@
         <meta name="description 8" content="offres">
         <meta name="description 9" content="soldes">
         <meta name="description 10" content="basket">
-        <meta name="author" content="climax">
+        <meta name="author" content="clivers">
         <meta name="pays" content="cameroun">
         <script src="{% static 'js/scripts.js' %}"></script>
-        <title>climax shop-accueil</title>
+        <title>CLIVERS shop-accueil</title>
         <!-- Favicon-->
         <link href="{% static 'fontawesome/css/all.min.css' %}" rel="stylesheet" type="text/css">
         <link rel="icon" type="image/x-icon" href="{% static 'img/accueil/favicon.ico' %}" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
         <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
+        <link href="{% static 'css/styles_mobile.css' %}" rel="stylesheet" />
     </head>
     <body id="page-top">
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg" id="mainNav">
-                <a class="navbar-brands">CLIMAX-SHOP</a>
+                <a class="navbar-brands"><strong>CLIVERS-SHOP</strong></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars ms-1"></i>
@@ -158,7 +159,7 @@
                 <div class="card-body p-4">
                     <h3>Téléphonie</h3>
                 </div>
-                <img src="{% static image4.image_couverture.url %}"  height="300px">
+                <img src="{% static image4.image_couverture.url %}" height="300px">
                 <!-- Product actions-->
                 </br>
                 <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
@@ -228,11 +229,11 @@
                 <div class="card-body p-4">
                     <h3>Produits frais et crudité</h3>
                 </div>
-                <img src="{% static image8.image_couverture.url %}"  height="300px">
+                <img src="{% static image8.image_couverture.url %}" height="300px">
                 <!-- Product actions-->
                 </br>
                 <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                    <div class="text-center"><a class="btn btn-warning mt-auto" href="{% url 'categorie' 8 %}">Voir tout</a>
+                    <div class="text-center"><a class="btn btn-warning mt-auto"  href="{% url 'categorie' 8 %}">Voir tout</a>
                     </div>
                 </div>
             </div> 
@@ -249,7 +250,7 @@
                             <h3>Produits de nécéssité</h3>
                         </div>
                         <!-- Product image-->
-                        <img class="card-img-top" src="{% static image9.image_couverture.url %}" height="300px" alt="..." />
+                        <img class="card-img-top" height="300px" src="{% static image9.image_couverture.url %}" alt="..." />
                         <!-- Product details-->
                         <!-- Product actions-->
                         
@@ -265,7 +266,7 @@
                         <div class="card-body p-4">
                             <h3>Chaussures</h3>
                         </div>
-                        <img class="card-img-top" src="{% static image11.image_couverture.url %}" height="300px" alt="..." />
+                        <img class="card-img-top" height="300px" src="{% static image11.image_couverture.url %}" height="300px" alt="..." />
                         <!-- Product actions-->
                         </br>
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
@@ -279,7 +280,7 @@
                             <h3>Produit de beauté</h3>
                         </div>
                         <!-- Product image-->
-                        <img class="card-img-top" src="{% static image12.image_couverture.url %}" height="300px" alt="..." />
+                        <img class="card-img-top" height="300px" src="{% static image12.image_couverture.url %}" alt="..." />
                         <!-- Product actions-->
                         </br>
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
@@ -299,7 +300,7 @@
                 <div class="card-body p-4">
                     <h3>Appareils électronique</h3>
                 </div>
-                <img src="{% static image10.image_couverture.url %}"  height="300px">
+                <img src="{% static image10.image_couverture.url %}" height="300px">
                 <!-- Product actions-->
                 </br>
                 <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
@@ -405,10 +406,10 @@
         
         <!-- Bootstrap core JS-->
         <script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}"></script>
-        <script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
         
     </body>
 </html>
