@@ -4563,12 +4563,12 @@ textarea.form-control-lg {
   padding-right: 0.5rem;
   color: #6c757d;
   content: var(--bs-breadcrumb-divider, "/") /* rtl: var(--bs-breadcrumb-divider, "/") */;
-}
+} 
 .breadcrumb-item.active {
   color: #6c757d;
 }
 
-.pagination {
+.pagination{
   display: flex;
   padding-left: 0;
   list-style: none;
