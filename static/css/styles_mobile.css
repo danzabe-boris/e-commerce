@@ -20,6 +20,10 @@ header.masthead{
 
 }
 
+img.img-large{
+	height:200px;
+}
+
 img.d-block{
   height:300px;
 }
