@@ -17,7 +17,6 @@ DEBUG =False
 ALLOWED_HOSTS = ['clivershop.com']
 
 
-
 # Application definition
 INSTALLED_APPS = [
     'django.contrib.admin',
