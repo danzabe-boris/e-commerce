@@ -3,6 +3,7 @@ from django.shortcuts import render,redirect
 from django.contrib import messages
 from .models import Produits,Categorie,SuperCategorie,ProduitsSuper
 from datetime import datetime
+from django.views.decorators.csrf import csrf_protect
 from utilisateurs.adresse import IP_adress,creerCommande,ajouterProduits,creerCommande,pagevisiter,infoconnexion,enregistrer,savemessage, saveproduits
 from utilisateurs.models import Utilisateurs,Message,ProduitsAjouter,InformationsUtilisateurs,Recherche,Commande,Article
 

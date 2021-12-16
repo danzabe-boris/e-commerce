@@ -1,4 +1,4 @@
-import re
+from django.views.decorators.csrf import csrf_protect
 from django.shortcuts import redirect, render
 from produits.views import accueil
 from .adresse import IP_adress,pagevisiter,infoconnexion
