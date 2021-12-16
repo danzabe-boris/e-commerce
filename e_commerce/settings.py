@@ -14,10 +14,7 @@ SECRET_KEY = 'django-insecure-of70bw4xpzb1-4rzm2@(k(@%el5zgvct19fpz^n80d!ag^h)+l
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG =False
 
-try:
-    ALLOWED_HOSTS = ['www.clivershop.com']
-except:
-    ALLOWED_HOSTS = ['clivershop.com']
+ALLOWED_HOSTS = ['clivershop.com']
 
 
 # Application definition

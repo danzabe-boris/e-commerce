@@ -9,6 +9,7 @@ from django.core.mail import EmailMessage
 
 
 #Authentification d'un utilisateur
+@csrf_protect
 def login(request):
     a=pagevisiter(request,pk="page d'authentification")
     error=False
@@ -29,6 +30,7 @@ def login(request):
     return render(request,'login.html',locals())
 
 #inscription d'un utilisateur
+@csrf_protect
 def inscription(request):
     a=pagevisiter(request,pk="page d'inscription")
     error_password=False
@@ -82,6 +84,7 @@ def inscription(request):
         return render(request,'inscription.html')
 
 #Réiniatiliser un mot de passe
+@csrf_protect
 def reinitialiser(request):
     a=pagevisiter(request,pk="page de reinitialisation de mot de passe")
     error=False
@@ -99,13 +102,14 @@ def reinitialiser(request):
                     reply_to=['mbobeboris1@gmail.com'],
                     headers={'Message-ID': 'foo'},
                 )
-            return redirect('/accueil')
+            return redirect('/connexion')
         else:
             error=True
             erreur="Cette adresse mail n'est pas liée à un compte"
             return render(request,'reinitialiser.html',locals())
     else:
         return render(request,'reinitialiser.html')
+
 
 def facture(request,pk):
     a=pagevisiter(request,pk="Page facture")

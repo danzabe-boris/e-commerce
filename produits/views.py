@@ -8,6 +8,7 @@ from utilisateurs.models import Utilisateurs,Message,ProduitsAjouter,Information
 
 # Create your views here.
 
+@csrf_protect
 def accueil(request):
     connect=False
     a=pagevisiter(request,pk="page_accueil")
@@ -46,7 +47,7 @@ def accueil(request):
             nombre=0
     return render(request,'accueil.html',locals())
     
-
+@csrf_protect
 def categorie(request,pk):
     categorie=Categorie.objects.get(id=pk)
     produit=Produits.objects.filter(nom_categorie=categorie)
@@ -83,7 +84,6 @@ def offre(request,pk):
         nombre=0
     return render(request,'offre.html',locals())
     
-
 def ajout_panier(request,pk,prix):
     product=Produits.objects.get(id=pk)
     ajout=ajouterProduits(request,product,prix)
@@ -114,6 +114,7 @@ def ajout_panier(request,pk,prix):
     else:
         return redirect('/accueil')
 
+@csrf_protect
 def panier(request):
     a=pagevisiter(request,pk="Page panier")
     if 'commande_id' in request.session:
@@ -129,6 +130,7 @@ def panier(request):
         pass
     return render(request,'panier.html',locals())
 
+@csrf_protect
 def verification(request):
     a=pagevisiter(request,pk="page de verification de compte")
     error=False
@@ -175,6 +177,7 @@ def verification(request):
         else: 
             pass
     return render (request,'connexion.html',locals())
+
 
 def supprimer(request,pk):
     objects=Produits.objects.get(id=pk)
