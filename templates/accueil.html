@@ -350,6 +350,7 @@
                     <h3 class="section-subheading text-muted">Vous avez des suggestions n'hésitez pas.</h3>
                 </div>
                 <form id="contactForm" method="POST">
+			{% csrf_token %}
                     <div class="row align-items-stretch mb-5">
                         <div class="col-md-6">
                             <div class="form-group">

@@ -14,8 +14,9 @@ SECRET_KEY = 'django-insecure-of70bw4xpzb1-4rzm2@(k(@%el5zgvct19fpz^n80d!ag^h)+l
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG =False
 
-ALLOWED_HOSTS = ['clivershop.com']
+ALLOWED_HOSTS = ['.clivershop.com']
 
+CSRF_TRUSTED_ORIGINS = ['https://*.clivershop.com','127.0.0.1']
 
 # Application definition
 INSTALLED_APPS = [
@@ -37,6 +38,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
+    
 ]
 
 ROOT_URLCONF = 'e_commerce.urls'
