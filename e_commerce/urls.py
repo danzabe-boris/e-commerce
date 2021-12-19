@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from produits.views import accueil,supprimer,offre,verification,categorie,ajout_panier,panier,description1,description2,description3,description4,description5
-from utilisateurs.views import login,profil,inscription,reinitialiser,facture
+from utilisateurs.views import login,profil,inscription,reinitialiser,facture,deconnexion
 from utilisateurs.adresse import supprimerarticle,incrementer,decrementer
 from django.conf.urls import handler404
 
@@ -42,6 +42,7 @@ urlpatterns = [
     path('supprimer/<int:pk>', supprimer,name='supprimer'),
     path('offre/<int:pk>', offre,name='offre'),
     path('profil', profil,name='profil'),
+    path('deconnexion', deconnexion,name='deconnexion')
 
 ]
 handler404='produits.views.handler404'

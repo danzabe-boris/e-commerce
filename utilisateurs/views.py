@@ -131,3 +131,8 @@ def profil(request):
         utilisateur=Utilisateurs.objects.get(id=utilisateur_id)
         commande=Commande.objects.filter(auteur=utilisateur)
     return render(request,'profil.html',locals())
+
+def deconnexion(request):
+    if 'utilisateur_id' in request.session:
+        del request.session['utilisateur_id']
+    return redirect('/accueil')

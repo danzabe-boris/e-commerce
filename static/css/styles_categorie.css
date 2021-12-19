@@ -3953,6 +3953,9 @@ textarea.form-control-lg {
 }
 
 .navbar {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: #212529;
   position: relative;
   display: flex;
   flex-wrap: wrap;
@@ -3973,7 +3976,7 @@ textarea.form-control-lg {
   align-items: center;
   justify-content: space-between;
 }
-.navbar-brand {
+.navbar-brands {
   padding-top: 0rem;
   padding-bottom: 0rem;
   margin-right: 1rem;
@@ -4008,6 +4011,9 @@ textarea.form-control-lg {
 }
 
 .navbar-toggler {
+  padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: #212529;
   padding: 0.25rem 0.75rem;
   font-size: 1.25rem;
   line-height: 1;

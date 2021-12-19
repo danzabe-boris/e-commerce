@@ -7,11 +7,11 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="veuillez confirme votre identité pour validez votre commande">
+    <meta name="description" content="veuillez confirmer votre identité pour validez votre commande">
     <meta name="author" content="clivers">
 
-    <title>clivershop|confirmation identité</title>
-
+    <title>clivershop | confirmation identité</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'img/accueil/favicon.ico' %}" />
     <!-- Custom fonts for this template-->
     <link href="{% static 'fontawesome/css/all.min.css' %}" rel="stylesheet" type="text/css">
 
@@ -19,8 +19,12 @@
     <link href="{% static 'css/css.min.css' %}" rel="stylesheet">
 
 </head>
-
-<body background="{% static 'img/arriere.gif'%}">
+<header class="masthead">
+    <div class="text text-center">
+        <img src="{% static 'img/logo.png' %}" height="150px">
+    </div>
+</header>
+<body>
 
     <div class="container">
         <!-- Outer Row -->
@@ -28,7 +32,7 @@
 
             <div class="col-xl-10 col-lg-12 col-md-9">
 
-                <div class="card o-hidden border-0 shadow-lg my-5">
+                <div class="card o-hidden border-0 shadow-lg my-1">
                     <div class="card-body p-0">
                         <!-- Nested Row within Card Body -->
                         <div class="row">
@@ -36,7 +40,7 @@
                             <div class="col-lg-10">
                                 <div class="p-5">
                                     <div class="text-center">
-                                        <h1 class="h4 text-gray-900 mb-2">Confirmer  votre identité {{utilisateur.prenom}}</h1>
+                                        <h1 class="h2 text-warning mb-2"><strong>Confirmer  votre identité {{utilisateur.prenom}}</strong></h1>
                                         <p class="mb-1">Nous voulons nous rassurer que c'est bien qui faites ses achats.</p>
                                         <p class="text text-success mb-1" style="padding:1px;margin: 1px;">Après cette étape la commande sera immédiatement validée.</p>
                                     </div>

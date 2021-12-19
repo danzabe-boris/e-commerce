@@ -3953,6 +3953,9 @@ textarea.form-control-lg {
 }
 
 .navbar {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: #212529;
   position: relative;
   display: flex;
   flex-wrap: wrap;
@@ -3975,6 +3978,9 @@ textarea.form-control-lg {
 }
 
 .navbar-brands {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: #212529;
   padding: 10px;
   padding-top: 0.3125rem;
   padding-bottom: 0.3125rem;
@@ -3984,15 +3990,10 @@ textarea.form-control-lg {
   white-space: nowrap;
 }
 
-.navbar-brand {
-  padding-top: 0.3125rem;
-  padding-bottom: 0.3125rem;
-  margin-right: 1rem;
-  font-size: 1.25rem;
-  text-decoration: none;
-  white-space: nowrap;
-}
 .navbar-nav {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: #212529;
   display: flex;
   flex-direction: column;
   padding-left: 0;
@@ -10951,14 +10952,22 @@ p {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
     border: none;
-    background-color: transparent;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: #212529;;
     transition: padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out;
   }
-  #mainNav .navbar-brand {
+  #mainNav .navbar-brands {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: #212529;
     font-size: 1.5em;
     transition: font-size 0.3s ease-in-out;
   }
-  #mainNav .navbar-brand img {
+  #mainNav .navbar-brands img {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: #212529;
     height: 2rem;
     transition: height 0.3s ease-in-out;
   }
@@ -10967,11 +10976,14 @@ p {
     padding-bottom: 1rem;
     background-color: #212529;
   }
-  #mainNav.navbar-shrink .navbar-brand {
+  #mainNav.navbar-shrink .navbar-brands {
     font-size: 1.25em;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: #212529;
   }
-  #mainNav.navbar-shrink .navbar-brand svg,
-#mainNav.navbar-shrink .navbar-brand img {
+  #mainNav.navbar-shrink .navbar-brands svg,
+#mainNav.navbar-shrink .navbar-brands img {
     height: 1.5rem;
   }
   #mainNav .navbar-nav .nav-item {

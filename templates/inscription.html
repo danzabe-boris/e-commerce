@@ -11,6 +11,7 @@
     <meta name="author" content="clivers">
 
     <title>clivershop | inscription</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'img/accueil/favicon.ico' %}" />
 
     <!-- Custom fonts for this template-->
     <link href="{% static 'fontawesome/css/all.min.css' %}" rel="stylesheet" type="text/css">
@@ -23,16 +24,20 @@
 
 
 </head>
-
-<body background="{% static 'img/arriere.gif'%}">
+<header class="masthead">
+    <div class="text text-center">
+        <img src="{% static 'img/logo.png' %}" height="150px">
+    </div>
+</header>
+<body>
     <div class="container">
-        <div class="card o-hidden border-0 shadow-lg my-5">
+        <div class="card o-hidden border-0 shadow-lg my-1">
                 <div class="row">
                     <div class="col-lg-1 d-none d-lg-block bg-register-image"></div>
                     <div class="col-lg-10">
                         <div class="p-5">
                             <div class="text-center">
-                                <h1 class="h4 text-gray-900 mb-4">Créer votre compte!</h1>
+                                <h1 class="h2 text-warning mb-4"><strong>Créer votre compte!</strong></h1>
                             </div>
                             <form class="user" method="POST">
                                 {% csrf_token %}

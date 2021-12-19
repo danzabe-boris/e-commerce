@@ -58,7 +58,7 @@ def categorie(request,pk):
         nom=request.POST['recherche']
         #Enregistrement de la recherche
         a=enregistrer(request,nom=nom,categorie=categorie)
-        produit=Produits.objects.all().filter(nom_produit__icontains=nom)
+        produit=Produits.objects.all().filter(nom_categorie=categorie,nom_produit__icontains=nom)
         return render(request,'categories.html',locals())
     else:
         if 'commande_id' in request.session:
