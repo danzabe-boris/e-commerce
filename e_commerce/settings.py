@@ -14,10 +14,8 @@ SECRET_KEY = 'django-insecure-of70bw4xpzb1-4rzm2@(k(@%el5zgvct19fpz^n80d!ag^h)+l
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG =True
 
-ALLOWED_HOSTS = ['127.0.0.1']
-#ALLOWED_HOSTS = ['.clivershop.com']
+ALLOWED_HOSTS = ['clivershop.com']
 
-#<script src="{% static 'js/scripts.js' %}"></script>
 CSRF_TRUSTED_ORIGINS = ['https://*.clivershop.com','127.0.0.1']
 
 # Application definition
