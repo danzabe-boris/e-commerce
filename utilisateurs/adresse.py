@@ -78,12 +78,21 @@ def pagevisiter(request,pk):
             test.save()
     elif 'adresse_ip' in request.session:
         adresse_ip=request.session['adresse_ip']
-        adresseip=InformationsUtilisateurs.objects.get(id=adresse_ip)
-        test=PageVisiter(
-            adresse_ip=adresseip,
-            page=pk
-            )
-        test.save()
+        try:
+            adresseip=InformationsUtilisateurs.objects.get(id=adresse_ip)
+            test=PageVisiter(
+                adresse_ip=adresseip,
+                page=pk
+                )
+            test.save()
+        except:
+            adresse=IP_adress(request)
+            adresseip=InformationsUtilisateurs.objects.get(id=adresse)
+            test=PageVisiter(
+                adresse_ip=adresseip,
+                page=pk
+                )
+            test.save()          
     else:
         adresse=IP_adress(request)
         adresseip=InformationsUtilisateurs.objects.get(id=adresse)
