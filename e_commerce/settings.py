@@ -12,7 +12,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-of70bw4xpzb1-4rzm2@(k(@%el5zgvct19fpz^n80d!ag^h)+l'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG =True
+DEBUG =False
 
 ALLOWED_HOSTS = ['clivershop.com']
 
@@ -39,6 +39,8 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.locale.LocaleMiddleware',
+    
+    
     
 ]
 
@@ -115,10 +117,12 @@ TEMPLATES[0]['DIRS']=[
 ]
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 STATICFILES_DIRS=[
     os.path.join(BASE_DIR,'static')
 ]
+
 
 MEDIA_ROOT=os.path.join(BASE_DIR,'static')
 GEOIP_PATH=os.path.join(BASE_DIR,'static/GeoLite2-City')
