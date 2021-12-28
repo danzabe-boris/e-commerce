@@ -1,0 +1,37 @@
+@media only screen and (max-width:20cm){
+h1{
+font-size: medium;
+}
+
+h2{
+font-size: medium;
+}
+
+h3{
+font-size: medium;  
+}
+
+h4{
+font-size: small;
+}
+
+header.masthead{
+  height:250px;
+
+}
+
+img.img-large{
+	height:200px;
+}
+
+img.d-block{
+  height:300px;
+}
+
+img.card-img-top{
+  height:200px;
+  width:100%;
+}
+
+
+}

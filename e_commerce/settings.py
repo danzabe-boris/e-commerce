@@ -16,7 +16,7 @@ DEBUG =False
 
 ALLOWED_HOSTS = ['clivershop.com']
 
-CSRF_TRUSTED_ORIGINS = ['https://*.clivershop.com','127.0.0.1']
+CSRF_TRUSTED_ORIGINS = ['https://*.clivershop.com']
 
 # Application definition
 INSTALLED_APPS = [
